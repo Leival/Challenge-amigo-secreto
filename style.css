@@ -133,7 +133,10 @@ ul {
     font-size: 18px;
     margin: 20px 0;
 }
-
+li{
+    list-style-image : url("https://manz.dev/assets/stickers/batmanz.png"); 
+    list-style-position: inside;
+}
 .result-list {
     margin-top: 15px;
     color: #05DF05;
