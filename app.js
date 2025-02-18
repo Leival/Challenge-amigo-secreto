@@ -13,7 +13,7 @@ function actualizarLista() {
 }
 
 function añadirNombre() {
-    let nombres = document.getElementById('amigo').value;
+    let nombres =(document.getElementById('amigo').value);
     console.log(typeof(nombres));
     if (nombres === "") {
         alert('Por favor, inserte un nombre.');
