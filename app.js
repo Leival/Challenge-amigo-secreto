@@ -1,6 +1,4 @@
 let nombresParticipantes = [];
-let numeroIndice = generarIndice();
-console.log(numeroIndice);
 console.log(nombresParticipantes);
 function actualizarLista() {
     const lista = document.getElementById("listaAmigos"); //Obtiene una referencia al elemento HTML con el ID "listaAmigos", donde se mostrarán los nombres de los participantes.
@@ -16,8 +14,7 @@ function actualizarLista() {
 
 function añadirNombre() {
     let nombres = document.getElementById('amigo').value;
-    console.log(nombres);
-   
+    console.log(typeof(nombres));
     if (nombres === "") {
         alert('Por favor, inserte un nombre.');
     } else {
@@ -32,18 +29,19 @@ function limpiarCaja() {
     valorCaja.value = '';
 }
 function sortearAmigo() {
-    let nombres = document.getElementById('amigo').value;
-    console.log(nombres);
-   
-    if (nombres === "") {
+    if (nombresParticipantes.length === 0) {
         alert('Por favor, inserte un nombre.');
     } else {
-
+        
+       let indiceParticipantes= nombresParticipantes.length;
+let num = Math.floor(Math.random()*(indiceParticipantes - 0))+0;
+        let nombreSecreto = nombresParticipantes[num];
+        console.log(num);
+        let ganador= document.getElementById("resultado");
+        ganador.innerHTML= nombreSecreto;
+        
+    
     
     }
-}
-
-function generarIndice(){
-    return Math.floor(Math.random()*10)+0;
 }
 
